@@ -91,7 +91,7 @@
   import articlesRef from '../main';
 
   export default {
-    name: 'articles',
+    name: 'articulos',
       firebase: {
         articles: articlesRef
       },
@@ -111,21 +111,12 @@
           this.newArticle.author = '';
           this.newArticle.url = '';
       },
-      removeArticle(article) {
+      removeArticle(article){
         articlesRef.child(article['.key']).remove();
       },
       volver: function(){
           this.$router.replace('hello')
       },
-      addArticle() {
-        articlesRef.push(this.newArticle);
-          this.newArticle.title = '';
-          this.newArticle.author = '';
-          this.newArticle.url = '';
-      },
-      removeArticle(article) {
-        articlesRef.child(article['.key']).remove();
-      }
     }
   }
 </script>

@@ -2,13 +2,12 @@
     <div id="hello">
 
     <button v-on:click="logout">Logout</button>
-    <button v-on:click="articles">Articulos</router-link></button>
+    <button v-on:click="articles">Articulos</button>
+    <button v-on:click="api">Api</button>
   </div>
 </template>
 
 <script>
-
-  import axios from "axios";
 
   export default {
     name: 'hello',
@@ -45,8 +44,8 @@
       articles: function(){
           this.$router.replace('articles')
       },
-      volver: function(){
-          this.$router.replace('hello')
+      api: function(){
+          this.$router.replace('api')
       }
     }
   }
